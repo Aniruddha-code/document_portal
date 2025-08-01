@@ -72,7 +72,7 @@ if __name__ == "__main__":
     from pathlib import Path
     from io import BytesIO
     
-    pdf_path=r"C:\\Users\\sunny\\document_portal\\data\\document_analysis\\NIPS-2017-attention-is-all-you-need-Paper.pdf"
+    pdf_path=r"D:\\PythonCode\\document_portal\\data\\document_analysis\\sample.pdf"
     class DummnyFile:
         def __init__(self,file_path):
             self.name = Path(file_path).name
@@ -96,3 +96,9 @@ if __name__ == "__main__":
         print(f"Error: {e}")
     
     
+#
+# Storage in S3
+# Hot Storage in S3: Data that is accessed frequently, possibly multiple times a day or hour.
+# Cold Storage in S3:Data that is rarely accessed, maybe once a year or less, but still must be retained.
+# Warm Storage in S3: Data that is accessed occasionally (e.g., weekly or monthly).
+# Glacier Storage in S3: Purpose: Long-term archival storage of data that you rarely need to retrieve. Speed: Retrieval takes minutes to hours, depending on the option you choose.Cost: Much cheaper than regular S3 storage classes (like S3 Standard or S3-IA).
