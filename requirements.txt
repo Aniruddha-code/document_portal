@@ -9,5 +9,6 @@ faiss-cpu
 PyPDF2
 structlog
 PyMuPDF
+pandas
 
 -e .
