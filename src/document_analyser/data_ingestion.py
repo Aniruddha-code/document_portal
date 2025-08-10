@@ -6,7 +6,7 @@ import uuid
 # uuid: it is a universal identification number, used to uniquely identify a session
 from datetime import datetime
 from logger.custom_logger import CustomLogger
-from exception.custom_exception import DocumentPortalException
+from exception.custom_exception_archieve import DocumentPortalException
 
 class DocumentHandler:
     """
