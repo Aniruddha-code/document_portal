@@ -3,6 +3,7 @@ import os
 import logging
 from datetime import datetime
 import structlog
+from logger.custom_logger import GLOBAL_LOGGER as log
 
 class CustomLogger:
     def __init__(self, log_dir="logs"):
@@ -48,7 +49,7 @@ class CustomLogger:
 
 
 # --- Usage Example ---
-if __name__ == "__main__":
-    logger = CustomLogger().get_logger(__file__)
-    logger.info("User uploaded a file", user_id=123, filename="report.pdf")
-    logger.error("Failed to process PDF", error="File not found", user_id=123)
+#if __name__ == "__main__":
+ #   logger = CustomLogger().get_logger(__file__)
+  #  logger.info("User uploaded a file", user_id=123, filename="report.pdf")
+   # logger.error("Failed to process PDF", error="File not found", user_id=123)
