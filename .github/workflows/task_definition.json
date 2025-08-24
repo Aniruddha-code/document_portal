@@ -1,14 +1,14 @@
 {
   "family": "documentportaltd",
   "networkMode": "awsvpc",
-  "executionRoleArn": "arn:aws:iam::685057748560:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::197423061074:role/ecsTaskExecutionRole",
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "1024",
   "memory": "8192",
   "containerDefinitions": [
     {
       "name": "document-portal-container",
-      "image": "685057748560.dkr.ecr.us-east-1.amazonaws.com/documentportal:latest",
+      "image": "197423061074.dkr.ecr.eu-north-1.amazonaws.com/documentportal",
       "cpu": 1024,
       "essential": true,
       "portMappings": [
@@ -29,7 +29,7 @@
       "secrets": [
         {
           "name": "GROQ_API_KEY",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:685057748560:secret:GROQ_API_KEY"
+          "valueFrom": "arn:aws:secretsmanager:eu-north-1:197423061074:secret:API_KEY-yIDRGV:GROQ_API_KEY"
         },
         {
           "name": "HF_TOKEN",
@@ -37,7 +37,7 @@
         },
         {
           "name": "GOOGLE_API_KEY",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:685057748560:secret:GOOGLE_API_KEY"
+          "valueFrom": "arn:aws:secretsmanager:eu-north-1:197423061074:secret:API_KEY-yIDRGV:GOOGLE_API_KEY"
         },
         {
           "name": "LANGCHAIN_API_KEY",
