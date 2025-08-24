@@ -90,3 +90,4 @@ jobs:
 
       - name: Done!
         run: echo "Deployed to ECS Fargate Successfully"
+        
