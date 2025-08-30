@@ -32,25 +32,17 @@
           "valueFrom": "arn:aws:secretsmanager:eu-north-1:197423061074:secret:API_KEY-yIDRGV:GROQ_API_KEY"
         },
         {
-          "name": "HF_TOKEN",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:685057748560:secret:HF_TOKEN"
-        },
-        {
           "name": "GOOGLE_API_KEY",
           "valueFrom": "arn:aws:secretsmanager:eu-north-1:197423061074:secret:API_KEY-yIDRGV:GOOGLE_API_KEY"
-        },
-        {
-          "name": "LANGCHAIN_API_KEY",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:685057748560:secret:LANGCHAIN_API_KEY"
         }
-      ],
+      ], 
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
           "awslogs-group": "/ecs/documentportaltd",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs",
-          "awslogs-create-group": "false",
+          "awslogs-create-group": "true",
           "mode": "non-blocking",
           "max-buffer-size": "25m"
         }
